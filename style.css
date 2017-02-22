@@ -1,0 +1,227 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	color: #333333;
+	font-family: 'Cardo', serif;
+	background-image: url("./images/background2");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.container {
+	padding: 100px 12%;
+}
+
+/*** MAIN ***/
+
+#nav-outer {
+	height: 100px;
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+	text-align: center;
+	position: fixed;
+	z-index: 1000;
+	transition: height 0.5s linear 0s;
+}
+.nav-inner {
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+.nav-inner a {
+	color: #333333;
+	text-decoration: none;
+	margin-left: 5.3%;
+	margin-right: 5.3%;
+	height: 61px;
+	opacity: 0.7;
+	transition: all 0.2s linear;
+	cursor: pointer;
+}
+.nav-inner a:hover {
+	opacity: .9;
+	text-shadow: 1px 1px 1px rgba(190, 190, 190, 0.9);
+}
+#logo {
+	width: 50px;
+	opacity: 0.55;
+	transition: opacity 0.2s linear;
+	margin-top: 20px;
+    margin-bottom: -26px;
+    cursor: pointer;
+	transition: all 0.5s linear 0s;
+}
+#logo:hover {
+	opacity: .8;
+}
+#shine {
+	position: absolute;
+    top: 11px;
+    left: 48.7%;
+	width: 15px;
+	height: 15px;
+    opacity: 0;
+    -webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+#logo:hover + #shine {
+	-webkit-animation: shine 1.5s linear;
+}
+#flowers {
+	width: 26%;
+	position: absolute;
+	top: 90%;
+	left: 35.6%;
+	right: 36%;
+	margin: 0 auto;
+	transition: width 0.5s linear 0s;
+}
+
+.body {
+	width: 100%;
+	transition: opacity 1.7s linear 0s;
+	height: 730px;
+}
+#heading {
+	color: #fff;
+	text-align: center;
+	padding-top: 20%;
+	line-height: 0.3;
+}
+#heading h2 {
+	font-family: 'Hind', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 2.5em;
+}
+#heading p {
+	font-size: 1.3em;
+    letter-spacing: 8.5px;
+    margin-right: -8px;
+}
+.countdown {
+	display: flex;
+	height: 300px;
+	margin: -20px 60px 0 60px;
+}
+.time {
+	flex: 1;
+	justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    text-align: center;
+}
+.time h1 {
+	font-size: 8em;
+	line-height: 0;
+	text-shadow: 3px 3px 2px rgba(130, 130, 130, 1);
+	opacity: 0.85;
+}
+.time p {
+	margin-top: -10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 1.1em;
+}
+
+/*** PHOTOS ***/
+
+.photos {
+	width: 100%;
+	background-color: #fff;
+}
+.photo-grid {
+	height: 120px;
+	display: flex;
+	flex: 1;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/*** RSVP ***/
+
+.rsvp {
+	background-image: url("./images/bouquet.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 550px;
+	color: #fff;
+	text-align: center;
+}
+
+/*** INFO ***/
+
+.info {
+	width: 100%;
+	background-color: #fff;
+}
+
+/*** REGISTRY ***/
+
+.registry {
+	background-image: url("./images/manandwife.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 700px;
+	color: #fff;
+	text-align: center;
+}
+
+/*** KEYFRAMES ***/
+
+@keyframes shine {
+    0%   {transform:rotate(0deg);opacity: 0;}
+    50%  {opacity: 1;width: 20px;}
+    100% {transform:rotate(360deg);opacity: 0;}
+}
+
+/*** MEDIA QUERIES ***/
+
+@media (max-width: 620px) {
+	.container {
+		padding: 100px 50px;
+	}
+	.nav-inner a {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	#flowers {
+		top: 98%;
+		width: 34%;
+		left: 33%;
+	}
+	.time {
+		display: block;
+	}
+	.time h1 {
+		font-size: 6em;
+	}
+	.countdown {
+		display: block;
+		margin-top: 50px;
+	}
+	#heading {
+		padding-top: 150px;
+	}
+	#heading p {
+		margin-bottom: 95px;
+	}
+}
+@media (min-width: 620px) {
+
+}
