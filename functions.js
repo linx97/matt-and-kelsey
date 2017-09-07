@@ -56,25 +56,21 @@ $(document).ready(function(){
             logo.style.width = "50px";
             logo.style.marginTop = "20px";
             logo.style.marginBottom = "-26px";
-            flowers.style.width = "26%";
+            flowers.style.width = "25%";
             // shine.syle.top = "11px";
             // shine.style.left = "48.7%";
             body.style.opacity = "1";
         }
     }
 
-    $('#nav-outer a').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	      var $target = $(this.hash);
+    $("#nav-outer a").click(function() {
+    	var $target = $(this.hash);
 	      $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-	      if ($target.length) {
-	        var targetOffset = $target.offset().top;
-	        $('html,body')
-	        .animate({scrollTop: targetOffset}, 1200);
-	       return false;
-	      }
-	    }
-	  });
+	    let top = $target.offset().top - 55
+	    $('html, body').animate({
+	        scrollTop: top
+	    }, 1500);
+	});
     
    
     countdown();   

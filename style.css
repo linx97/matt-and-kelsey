@@ -7,10 +7,11 @@ body {
 	margin: 0;
 	color: #333333;
 	font-family: 'Cardo', serif;
-	background-image: url("./images/background2");
+	background-image: url("./images/engagement11.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-position: center;
 }
 
 .container {
@@ -28,6 +29,9 @@ body {
 	position: fixed;
 	z-index: 1000;
 	transition: height 0.5s linear 0s;
+	-webkit-box-shadow: 0px 1px 7px 0px rgba(50, 50, 50, 0.07);
+	-moz-box-shadow:    0px 1px 7px 0px rgba(50, 50, 50, 0.07);
+	box-shadow:         0px 1px 7px 0px rgba(50, 50, 50, 0.07);
 }
 .nav-inner {
 	text-align: center;
@@ -76,9 +80,10 @@ body {
 	-webkit-animation: shine 1.5s linear;
 }
 #flowers {
-	width: 26%;
+	width: 25%;
+	height: 83%;
 	position: absolute;
-	top: 90%;
+	top: 63%;
 	left: 35.6%;
 	right: 36%;
 	margin: 0 auto;
@@ -93,8 +98,9 @@ body {
 #heading {
 	color: #fff;
 	text-align: center;
-	padding-top: 20%;
+	padding-top: 27%;
 	line-height: 0.3;
+	text-shadow: 2px 2px 8px rgba(130, 130, 130, 1);
 }
 #heading h2 {
 	font-family: 'Hind', sans-serif;
@@ -109,7 +115,7 @@ body {
 }
 .countdown {
 	display: flex;
-	height: 300px;
+	height: 270px;
 	margin: -20px 60px 0 60px;
 }
 .time {
@@ -120,11 +126,11 @@ body {
     flex-direction: column;
     color:white;
     text-align: center;
+    text-shadow: 3px 3px 8px rgba(130, 130, 130, 1);
 }
 .time h1 {
 	font-size: 8em;
 	line-height: 0;
-	text-shadow: 3px 3px 2px rgba(130, 130, 130, 1);
 	opacity: 0.85;
 }
 .time p {
@@ -154,10 +160,11 @@ body {
 /*** RSVP ***/
 
 .rsvp {
-	background-image: url("./images/bouquet.jpg");
+	background-image: url("./images/engagement35.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-position: center;
 	height: 550px;
 	color: #fff;
 	text-align: center;
@@ -173,7 +180,7 @@ body {
 /*** REGISTRY ***/
 
 .registry {
-	background-image: url("./images/manandwife.jpg");
+	background-image: url("./images/engagement17.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
