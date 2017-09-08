@@ -67,11 +67,10 @@ $(document).ready(function(){
     	var $target = $(this.hash);
 	      $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
 	    let top = $target.offset().top - 55
-	    $('html, body').animate({
+	    $('body').animate({
 	        scrollTop: top
 	    }, 1500);
 	});
-    
    
     countdown();   
     window.addEventListener("scroll", yScroll);

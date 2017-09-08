@@ -5,6 +5,7 @@
 	<title>Matt | Kelsey</title>
 	<link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Hind:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="./bootstrap.css">
 	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -30,20 +31,29 @@
 		</div>
 	</div>
 	<div class="photos" id="2">
-		<div class="container">
+		<div class="contain" id="grid">
 			<h1>Photos</h1>
 			<div class="photo-grid">
-				<p>coming soon!</p>
+				<div class="row">
+					<div class="col-sm-4 photo" v-for="photo in currentPhotos">
+						<img :src="photo" alt="">
+					</div>
+				</div>
+				<div class="pages">
+					<a @click="changePage('one')" v-bind:class="{active: current === 'one'}">1</a>
+					<a @click="changePage('two')" v-bind:class="{active: current === 'two'}">2</a>
+					<a @click="changePage('three')" v-bind:class="{active: current === 'three'}">3</a>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="rsvp" id="3">
-		<div class="container">
+		<div class="contain">
 			
 		</div>
 	</div>
 	<div class="info" id="4">
-		<div class="container">
+		<div class="contain">
 			<h1>Info</h1>
 			<div class="photo-grid">
 				<p>coming soon!</p>
@@ -51,11 +61,61 @@
 		</div>
 	</div>
 	<div class="registry" id="5">
-		<div class="container">
+		<div class="contain">
 
 		</div>
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script type="text/javascript" src="./functions.js"></script>
+	<script src="https://unpkg.com/vue"></script>
+	<script>
+		var app = new Vue({
+		  el: '#grid',
+		  data: {
+		    one: [
+		    	'images/engagement4.jpg',
+		    	'images/engagement10.jpg',
+		    	'images/engagement5.jpg',
+		    	'images/engagement16.jpg',
+		    	'images/engagement12.jpg',
+		    	'images/engagement6.jpg',
+		    	'images/engagement13.jpg',
+		    	'images/engagement8.jpg',
+		    	'images/engagement9.jpg'
+		    ],
+		    two: [
+		    	'images/engagement10.jpg',
+		    	'images/engagement11.jpg',
+		    	'images/engagement12.jpg',
+		    	'images/engagement13.jpg',
+		    	'images/engagement14.jpg',
+		    	'images/engagement15.jpg',
+		    	'images/engagement16.jpg',
+		    	'images/engagement17.jpg',
+		    	'images/engagement18.jpg'
+		    ],
+		    three: [
+				'images/engagement19.jpg',
+		    	'images/engagement20.jpg',
+		    	'images/engagement21.jpg',
+		    	'images/engagement22.jpg',
+		    	'images/engagement23.jpg',
+		    	'images/engagement24.jpg',
+		    	'images/engagement25.jpg',
+		    	'images/engagement26.jpg',
+		    	'images/engagement27.jpg'
+		    ],
+		    current: 'one'
+		  },
+		  computed: {
+		  	currentPhotos() { return this[this.current] }
+		  },
+		  methods: {
+		  	changePage: function(page) {
+		  		this.current = page;
+		  	}
+		  }
+		})
+	</script>
 </body>
 </html>

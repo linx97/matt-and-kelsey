@@ -5,17 +5,17 @@ html {
 body {
 	height: 100%;
 	margin: 0;
-	color: #333333;
+	color: #555555;
 	font-family: 'Cardo', serif;
-	background-image: url("./images/engagement11.jpg");
+	background-image: url("./images/engagement36.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
 }
 
-.container {
-	padding: 100px 12%;
+.contain {
+	padding: 100px 17%;
 }
 
 /*** MAIN ***/
@@ -28,7 +28,7 @@ body {
 	text-align: center;
 	position: fixed;
 	z-index: 1000;
-	transition: height 0.5s linear 0s;
+	transition: height 0.7s linear 0s;
 	-webkit-box-shadow: 0px 1px 7px 0px rgba(50, 50, 50, 0.07);
 	-moz-box-shadow:    0px 1px 7px 0px rgba(50, 50, 50, 0.07);
 	box-shadow:         0px 1px 7px 0px rgba(50, 50, 50, 0.07);
@@ -45,7 +45,7 @@ body {
 	margin-right: 5.3%;
 	height: 61px;
 	opacity: 0.7;
-	transition: all 0.2s linear;
+	transition: all 0.7s linear;
 	cursor: pointer;
 }
 .nav-inner a:hover {
@@ -55,11 +55,11 @@ body {
 #logo {
 	width: 50px;
 	opacity: 0.55;
-	transition: opacity 0.2s linear;
+	transition: opacity 0.7s linear;
 	margin-top: 20px;
     margin-bottom: -26px;
     cursor: pointer;
-	transition: all 0.5s linear 0s;
+	transition: all 0.7s linear 0s;
 }
 #logo:hover {
 	opacity: .8;
@@ -146,16 +146,41 @@ body {
 	width: 100%;
 	background-color: #fff;
 }
-.photo-grid {
-	height: 120px;
-	display: flex;
-	flex: 1;
-	justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+
+.photo {
+	margin: 1.666667%;
+	cursor: pointer;
+	overflow: hidden;
+	width: 30%;
+    height: 280px;
+    padding: 0 !important;
 }
 
+.photo img {
+	width: 101%;
+	min-height: 280px;
+	transition: transform 500ms ease;
+}
+
+.photo img:hover {
+	transform: scale(1.1);
+}
+
+.pages {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.active {
+	color: #9E9E9E;
+	text-decoration: underline;
+}
+
+.pages a {
+	padding: 7px;
+	cursor: pointer;
+	z-index: 1000;
+}
 
 /*** RSVP ***/
 
