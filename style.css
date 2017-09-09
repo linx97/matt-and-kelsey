@@ -1,5 +1,6 @@
 html {
 	height: 100%;
+	padding: 0;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
+	padding: 0;
 }
 
 .contain {
@@ -143,7 +145,7 @@ body {
 /*** PHOTOS ***/
 
 .photos {
-	width: 100%;
+	width: 100vw;
 	background-color: #fff;
 }
 
@@ -154,6 +156,11 @@ body {
 	width: 30%;
     height: 280px;
     padding: 0 !important;
+    display: none;
+}
+
+.shown {
+	display: block;
 }
 
 .photo img {
@@ -224,6 +231,12 @@ body {
 
 /*** MEDIA QUERIES ***/
 
+@media (max-width: 980px) {
+	#heading {
+		padding-top: 43%;
+	}
+}
+
 @media (max-width: 620px) {
 	.container {
 		padding: 100px 50px;
@@ -237,23 +250,22 @@ body {
 		width: 34%;
 		left: 33%;
 	}
-	.time {
-		display: block;
-	}
 	.time h1 {
-		font-size: 6em;
+		font-size: 5em;
 	}
 	.countdown {
-		display: block;
-		margin-top: 50px;
+		height: 100px;
+		margin: -20px 20px 0 20px;
 	}
 	#heading {
-		padding-top: 150px;
+		padding-top: 60%;
 	}
 	#heading p {
 		margin-bottom: 95px;
 	}
 }
-@media (min-width: 620px) {
-
+@media (max-width: 400px) {
+	#heading {
+		padding-top: 70%;
+	}
 }

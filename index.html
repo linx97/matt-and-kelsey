@@ -5,6 +5,7 @@
 	<title>Matt | Kelsey</title>
 	<link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Hind:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="./bootstrap.css">
 	<link rel="stylesheet" href="./style.css">
 </head>
@@ -35,14 +36,14 @@
 			<h1>Photos</h1>
 			<div class="photo-grid">
 				<div class="row">
-					<div class="col-sm-4 photo" v-for="photo in currentPhotos">
-						<img :src="photo" alt="">
+					<div class="col-sm-4 photo" v-for="(photo, index) in photos"  v-bind:class="{shown: index >= current.beg && index <= current.end}">
+						<a data-fancybox="gallery" :href="photo"><img :src="photo" alt="" @click="openModal(photo)"></a>
 					</div>
 				</div>
 				<div class="pages">
-					<a @click="changePage('one')" v-bind:class="{active: current === 'one'}">1</a>
-					<a @click="changePage('two')" v-bind:class="{active: current === 'two'}">2</a>
-					<a @click="changePage('three')" v-bind:class="{active: current === 'three'}">3</a>
+					<a @click="changePage(1,0,8)" v-bind:class="{active: current.page === 1}">1</a>
+					<a @click="changePage(2,9,17)" v-bind:class="{active: current.page === 2}">2</a>
+					<a @click="changePage(3,18,26)" v-bind:class="{active: current.page === 3}">3</a>
 				</div>
 			</div>
 		</div>
@@ -66,13 +67,14 @@
 		</div>
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
 	<script type="text/javascript" src="./functions.js"></script>
 	<script src="https://unpkg.com/vue"></script>
 	<script>
 		var app = new Vue({
 		  el: '#grid',
 		  data: {
-		    one: [
+		    photos: [
 		    	'images/engagement4.jpg',
 		    	'images/engagement10.jpg',
 		    	'images/engagement5.jpg',
@@ -81,9 +83,7 @@
 		    	'images/engagement6.jpg',
 		    	'images/engagement13.jpg',
 		    	'images/engagement8.jpg',
-		    	'images/engagement9.jpg'
-		    ],
-		    two: [
+		    	'images/engagement9.jpg',
 		    	'images/engagement10.jpg',
 		    	'images/engagement11.jpg',
 		    	'images/engagement12.jpg',
@@ -92,9 +92,7 @@
 		    	'images/engagement15.jpg',
 		    	'images/engagement16.jpg',
 		    	'images/engagement17.jpg',
-		    	'images/engagement18.jpg'
-		    ],
-		    three: [
+		    	'images/engagement18.jpg',
 				'images/engagement19.jpg',
 		    	'images/engagement20.jpg',
 		    	'images/engagement21.jpg',
@@ -105,14 +103,24 @@
 		    	'images/engagement26.jpg',
 		    	'images/engagement27.jpg'
 		    ],
-		    current: 'one'
-		  },
-		  computed: {
-		  	currentPhotos() { return this[this.current] }
+		    current: {
+		    	page: 1,
+		    	beg: 0,
+		    	end: 8
+		    },
+		    modalOpen: false,
+		    selected: ''
 		  },
 		  methods: {
-		  	changePage: function(page) {
-		  		this.current = page;
+		  	changePage: function(page, beg, end) {
+		  		this.current = {page: page, beg: beg, end: end};
+		  	},
+		  	openModal: function(img) {
+		  		this.selected = img;
+		  		this.modalOpen = true;
+		  	},
+		  	closeModal: function() { 
+		  		this.modalOpen = false;
 		  	}
 		  }
 		})

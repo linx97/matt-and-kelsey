@@ -63,14 +63,40 @@ $(document).ready(function(){
         }
     }
 
-    $("#nav-outer a").click(function() {
-    	var $target = $(this.hash);
-	      $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-	    let top = $target.offset().top - 55
-	    $('body').animate({
-	        scrollTop: top
-	    }, 1500);
-	});
+ //    $("#nav-outer a").click(function() {
+ //    	var $target = $(this.hash);
+	//       $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+	//     let top = $target.offset().top - 55
+	//     $('body').animate({
+	//         scrollTop: top
+	//     }, 1500);
+	// });
+
+	$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        let i = target.offset().top - 55;
+        $('html, body').animate({
+          scrollTop: i
+        }, 2000);
+      }
+    }
+  });
    
     countdown();   
     window.addEventListener("scroll", yScroll);
