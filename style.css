@@ -83,9 +83,9 @@ body {
 }
 #flowers {
 	width: 25%;
-	height: 83%;
+	height: 87%;
 	position: absolute;
-	top: 63%;
+	top: 62%;
 	left: 35.6%;
 	right: 36%;
 	margin: 0 auto;
@@ -113,7 +113,6 @@ body {
 #heading p {
 	font-size: 1.3em;
     letter-spacing: 8.5px;
-    margin-right: -8px;
 }
 .countdown {
 	display: flex;
@@ -163,6 +162,10 @@ body {
 	display: block;
 }
 
+.photo a {
+	cursor: pointer;
+}
+
 .photo img {
 	width: 101%;
 	min-height: 280px;
@@ -192,14 +195,128 @@ body {
 /*** RSVP ***/
 
 .rsvp {
-	background-image: url("./images/engagement35.jpg");
+	background-image: url("./images/engagement18.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
-	height: 550px;
-	color: #fff;
+	height: 670px;
 	text-align: center;
+	padding: 70px 18%;
+}
+
+.rsvp-form {
+	height: 100%;
+    background: rgba(250,250,250,0.3);
+    border-radius: 5px;
+    padding: 25px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	position: relative;
+}
+
+.rsvp-white {
+	height: 100%;
+    background: #fff;
+    border: 2.5px solid rgba(206,157,134,0.7);
+    border-radius: 5px;
+    padding: 40px 50px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box; 
+}
+
+.rsvp-form h1 {
+	margin-top: 0;
+}
+
+.rsvp-form .container {
+	margin-top: 10px;
+	padding: 30px 9% 0 9%;
+}
+
+.rsvp-form label:first-of-type {
+	display: block;
+}
+
+.rsvp-form label {
+	font-weight: bold;
+}
+
+input[type="radio"] {
+	margin: 30px 12px 40px;
+}
+
+select {
+	margin: 30px 12px 0px;
+}
+
+.col-sm-6 {
+	box-sizing: border-box;
+}
+
+.rsvp-form .col-sm-12 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    margin: 15px 0;
+    height: 40px;
+    font-size: 1em;
+    font-family: Cardo, serif;
+    text-align: center;
+}
+
+button {
+  margin-top: 20px;
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius:30px;
+  background: rgb(141, 173, 228);
+  border: 2px solid rgb(141, 173, 228);
+  color:#fff;
+  letter-spacing:1px;
+  text-shadow:0;
+  font-size:12px;
+  font-weight:bold;
+}
+
+button:hover {
+  opacity: 0.88;
+}
+
+.rsvp-form img {
+	position: absolute;
+	width: 95px;
+	bottom: 24px;
+}
+
+.rsvp-form .one {
+	left: 2px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.rsvp-form .two {
+	right: 2px;
 }
 
 /*** INFO ***/
@@ -219,6 +336,7 @@ body {
 	height: 700px;
 	color: #fff;
 	text-align: center;
+	background-position: center;
 }
 
 /*** KEYFRAMES ***/
@@ -263,6 +381,8 @@ body {
 	#heading p {
 		margin-bottom: 95px;
 	}
+	.registry {
+	background-image: url("./images/engagement17-phone.jpg");
 }
 @media (max-width: 400px) {
 	#heading {
