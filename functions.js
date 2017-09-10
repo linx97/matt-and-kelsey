@@ -29,7 +29,7 @@ $(document).ready(function(){
 	 	var mins = document.getElementById("mins");
 	 	mins.innerHTML = "<h1>" + m + "</h1><p>minutes</p>";
 
-	 	setInterval(countdown, 5000);
+	 	setInterval(countdown, 30000);
 	}
 
     var nav, yPos, logo, shine, body;
@@ -47,7 +47,7 @@ $(document).ready(function(){
             logo.style.width = "30px";
             logo.style.marginTop = "11px";
             logo.style.marginBottom = "-12px";
-            flowers.style.width = "16%";
+            flowers.style.top = "44%";
             // shine.syle.top = "6px";
             // shine.style.left = "49%";
             body.style.opacity = "0";
@@ -56,7 +56,7 @@ $(document).ready(function(){
             logo.style.width = "50px";
             logo.style.marginTop = "20px";
             logo.style.marginBottom = "-26px";
-            flowers.style.width = "25%";
+            flowers.style.top = "58%";
             // shine.syle.top = "11px";
             // shine.style.left = "48.7%";
             body.style.opacity = "1";

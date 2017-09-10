@@ -12,7 +12,8 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center;
+	background-position-x: center;
+	background-position-y: 30px;
 	padding: 0;
 }
 
@@ -83,13 +84,11 @@ body {
 }
 #flowers {
 	width: 25%;
-	height: 87%;
 	position: absolute;
-	top: 62%;
-	left: 35.6%;
-	right: 36%;
+	top: 58%;
+	left: 37.5%;
 	margin: 0 auto;
-	transition: width 0.5s linear 0s;
+	transition: top 0.5s linear 0s;
 }
 
 .body {
@@ -199,7 +198,8 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center;
+	background-position-x: center;
+	background-position-y: 30px;
 	height: 670px;
 	text-align: center;
 	padding: 70px 18%;
@@ -349,24 +349,41 @@ button:hover {
 
 /*** MEDIA QUERIES ***/
 
-@media (max-width: 980px) {
+@media screen and (max-width: 980px) {
 	#heading {
-		padding-top: 43%;
+		padding-top: 52%;
 	}
 }
 
-@media (max-width: 620px) {
-	.container {
-		padding: 100px 50px;
+@media screen and (max-width: 768px) {
+	body {
+		background-position-y: 0px;;
+    	background-position-x: center; 
+	}
+	.registry {
+		background-position-y: 100px;
+    	background-position-x: -450px;
+	}
+	.photo {
+		height: 200px;
+	}
+	.photo img {
+		min-height: 200px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.contain {
+		padding: 50px 11%;
 	}
 	.nav-inner a {
 		margin-left: 10px;
 		margin-right: 10px;
 	}
 	#flowers {
-		top: 98%;
-		width: 34%;
-		left: 33%;
+		top: 73%;
+	    width: 50%;
+	    left: 24.5%;
 	}
 	.time h1 {
 		font-size: 5em;
@@ -376,16 +393,47 @@ button:hover {
 		margin: -20px 20px 0 20px;
 	}
 	#heading {
-		padding-top: 60%;
+		padding-top: 80%;
 	}
 	#heading p {
-		margin-bottom: 95px;
+		margin-bottom: 60px;
+	}
+	.photo {
+		height: 125px;
+	}
+	.photo img {
+		min-height: 125px;
+	}
+	.rsvp {
+		padding: 70px 3%;
+	}
+	.rsvp-form {
+		padding: 12px;
+	}
+	.rsvp-white {
+	    padding: 40px 20px;
+	}
+	.rsvp-form img {
+	    width: 80px;
+	    bottom: 13px;
+	}
+	.rsvp-form .two {
+		right: -12px;
+	}
+	.rsvp-form .one {
+		left: -12px;
 	}
 	.registry {
-	background-image: url("./images/engagement17-phone.jpg");
+	    background-position-y: 40px;
+	    background-position-x: -284px;
+	}
 }
-@media (max-width: 400px) {
-	#heading {
-		padding-top: 70%;
+@media screen and (max-width: 400px) {
+	body {
+	    background-position-y: -8px;
+	    background-position-x: -300px;
+	}
+	.time h1 {
+		font-size: 4em;
 	}
 }
