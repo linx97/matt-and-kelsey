@@ -94,7 +94,7 @@ body {
 .body {
 	width: 100%;
 	transition: opacity 1.7s linear 0s;
-	height: 730px;
+	height: 100vh;
 }
 #heading {
 	color: #fff;
@@ -357,18 +357,26 @@ button:hover {
 
 @media screen and (max-width: 768px) {
 	body {
-		background-position-y: 0px;;
-    	background-position-x: center; 
+		background-image: url("./images/engagement11-phone.jpg");
+		background-position: center;
 	}
 	.registry {
-		background-position-y: 100px;
-    	background-position-x: -450px;
+		background-image: url("./images/bouquet4.jpg");
+		background-position: center;
+	}
+	.rsvp {
+	background-image: url("./images/engagement18-phone.jpg");
+		background-position-x: center;
+		background-position-y: center;
 	}
 	.photo {
 		height: 200px;
 	}
 	.photo img {
 		min-height: 200px;
+	}
+	#heading {
+		padding-top: 70%;
 	}
 }
 
@@ -423,16 +431,8 @@ button:hover {
 	.rsvp-form .one {
 		left: -12px;
 	}
-	.registry {
-	    background-position-y: 40px;
-	    background-position-x: -284px;
-	}
 }
 @media screen and (max-width: 400px) {
-	body {
-	    background-position-y: -8px;
-	    background-position-x: -300px;
-	}
 	.time h1 {
 		font-size: 4em;
 	}
