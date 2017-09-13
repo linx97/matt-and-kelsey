@@ -9,6 +9,7 @@ body {
 	color: #555555;
 	font-family: 'Cardo', serif;
 	background-image: url("./images/engagement36.jpg");
+	-webkit-background-size: cover!important; 
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -195,6 +196,7 @@ body {
 
 .rsvp {
 	background-image: url("./images/engagement18.jpg");
+	-webkit-background-size: cover!important; 
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -330,6 +332,7 @@ button:hover {
 
 .registry {
 	background-image: url("./images/engagement17.jpg");
+	-webkit-background-size: cover!important; 
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
