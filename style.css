@@ -54,7 +54,6 @@ body {
 }
 .nav-inner a:hover {
 	opacity: .9;
-	text-shadow: 1px 1px 1px rgba(190, 190, 190, 0.9);
 }
 #logo {
 	width: 50px;
@@ -84,10 +83,10 @@ body {
 	-webkit-animation: shine 1.5s linear;
 }
 #flowers {
-	width: 25%;
+	width: 24%;
 	position: absolute;
 	top: 58%;
-	left: 37.5%;
+	left: 38%;
 	margin: 0 auto;
 	transition: top 0.5s linear 0s;
 }
@@ -115,19 +114,15 @@ body {
     letter-spacing: 8.5px;
 }
 .countdown {
-	display: flex;
 	height: 270px;
 	margin: -20px 60px 0 60px;
 }
 .time {
-	flex: 1;
-	justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     color:white;
     text-align: center;
     text-shadow: 3px 3px 8px rgba(130, 130, 130, 1);
+    width: 33.3333%;
+    float: left;
 }
 .time h1 {
 	font-size: 8em;
@@ -364,7 +359,7 @@ button:hover {
 		background-position: center;
 	}
 	.registry {
-		background-image: url("./images/bouquet4.jpg");
+		background-image: url("./images/engagement17-phone.jpg");
 		background-position: center;
 	}
 	.rsvp {
