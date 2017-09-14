@@ -1,6 +1,7 @@
 html {
-	height: 100%;
 	padding: 0;
+	height: 100vh; /* set viewport constraint */
+    min-height: 100%; /* enforce height */
 }
 
 body {
@@ -434,8 +435,4 @@ button:hover {
 	.time h1 {
 		font-size: 3.5em;
 	}
-}
-
-@media (max-width: @iphone-screen) {
-    background-attachment: scroll;
 }
