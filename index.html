@@ -59,8 +59,10 @@
 				<div class="container">
 					<form action="https://formspree.io/kmm2634@gmail.com" method="POST" method="POST">
 						<label>Will you be able to attend?</label>
-						<input type="radio" name="attending" value="accept" checked="checked">  Gladly Accept
-						<input type="radio" name="attending" value="decline">  Regretfully Decline<br>
+						<div class="radio">
+							<input type="radio" name="attending" value="accept" checked="checked">  Gladly Accept<br>
+							<input type="radio" name="attending" value="decline">  Regretfully Decline<br>
+						</div>
 						<label for="number-of-guests" required="required">How many will be attending?</label><br>
 						<select name="number-of-guests" id="">
 							<option value="0">0</option>

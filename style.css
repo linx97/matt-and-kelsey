@@ -241,7 +241,7 @@ body {
 	font-weight: bold;
 }
 
-input[type="radio"] {
+.radio {
 	margin: 30px 12px 40px;
 }
 
@@ -432,6 +432,10 @@ button:hover {
 }
 @media screen and (max-width: 400px) {
 	.time h1 {
-		font-size: 4em;
+		font-size: 3.5em;
 	}
+}
+
+@media (max-width: @iphone-screen) {
+    background-attachment: scroll;
 }
