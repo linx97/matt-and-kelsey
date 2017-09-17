@@ -5,8 +5,7 @@
 	<title>Matt | Kelsey</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" type="image/png" href="./images/logo.png"/>
-	<link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Hind:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Hind:300,400+Cardo" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="./bootstrap.css">
 	<link rel="stylesheet" href="./style.css">
@@ -63,8 +62,9 @@
 							<input type="radio" name="attending" value="accept" checked="checked">  Gladly Accept<br>
 							<input type="radio" name="attending" value="decline">  Regretfully Decline<br>
 						</div>
-						<label for="number-of-guests" required="required">How many will be attending?</label><br>
-						<select name="number-of-guests" id="">
+						<label>How many will be attending?</label><br>
+						<label for="number-of-adults" required="required">Adults</label>
+						<select name="number-of-adults" id="">
 							<option value="0">0</option>
 							<option value="1" selected>1</option>
 							<option value="1">2</option>
@@ -77,7 +77,21 @@
 							<option value="1">9</option>
 							<option value="1">10</option>
 						</select>
-						<input id="name" type="text" name="name" placeholder="names" required="required" />
+						<label for="number-of-children" required="required">Children</label>
+						<select name="number-of-children" id="">
+							<option value="0">0</option>
+							<option value="1" selected>1</option>
+							<option value="1">2</option>
+							<option value="1">3</option>
+							<option value="1">4</option>
+							<option value="1">5</option>
+							<option value="1">6</option>
+							<option value="1">7</option>
+							<option value="1">8</option>
+							<option value="1">9</option>
+							<option value="1">10</option>
+						</select>
+						<input class="mt" id="name" type="text" name="name" placeholder="names" required="required" />
 				    	<input id="email" type="email" name="_reply2" placeholder="email" required="required" />
 						<button type="submit">Send</button>
 						<img src="./images/flowers4.png" alt="" class="one"><img src="./images/flowers4.png" alt="" class="two">
@@ -96,67 +110,16 @@
 	</div>
 	<div class="registry" id="5">
 		<div class="contain">
-
+			<div class="holder">
+				<h1>Registry</h1>
+				<p>You can help us save for our first home on Honeyfund!</p>
+				<a href="https://www.honeyfund.com/wedding/kelseyandmattgethitched"><button>Our Registry</button></a>
+			</div>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
 	<script type="text/javascript" src="./functions.js"></script>
 	<script src="https://unpkg.com/vue@2.4.2/dist/vue.min.js"></script>
-	<script>
-		var app = new Vue({
-		  el: '#grid',
-		  data: {
-		    photos: [
-		    	'images/engagement4.jpg',
-		    	'images/engagement10.jpg',
-		    	'images/engagement5.jpg',
-		    	'images/engagement16.jpg',
-		    	'images/engagement12.jpg',
-		    	'images/engagement6.jpg',
-		    	'images/engagement13.jpg',
-		    	'images/engagement8.jpg',
-		    	'images/engagement9.jpg',
-		    	'images/engagement10.jpg',
-		    	'images/engagement11.jpg',
-		    	'images/engagement12.jpg',
-		    	'images/engagement13.jpg',
-		    	'images/engagement14.jpg',
-		    	'images/engagement15.jpg',
-		    	'images/engagement16.jpg',
-		    	'images/engagement17.jpg',
-		    	'images/engagement18.jpg',
-				'images/engagement19.jpg',
-		    	'images/engagement20.jpg',
-		    	'images/engagement21.jpg',
-		    	'images/engagement22.jpg',
-		    	'images/engagement23.jpg',
-		    	'images/engagement24.jpg',
-		    	'images/engagement25.jpg',
-		    	'images/engagement26.jpg',
-		    	'images/engagement27.jpg'
-		    ],
-		    current: {
-		    	page: 1,
-		    	beg: 0,
-		    	end: 8
-		    },
-		    modalOpen: false,
-		    selected: ''
-		  },
-		  methods: {
-		  	changePage: function(page, beg, end) {
-		  		this.current = {page: page, beg: beg, end: end};
-		  	},
-		  	openModal: function(img) {
-		  		this.selected = img;
-		  		this.modalOpen = true;
-		  	},
-		  	closeModal: function() { 
-		  		this.modalOpen = false;
-		  	}
-		  }
-		})
-	</script>
 </body>
 </html>

@@ -63,14 +63,59 @@ $(document).ready(function(){
         }
     }
 
- //    $("#nav-outer a").click(function() {
- //    	var $target = $(this.hash);
-	//       $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-	//     let top = $target.offset().top - 55
-	//     $('body').animate({
-	//         scrollTop: top
-	//     }, 1500);
-	// });
+ 			var app = new Vue({
+		  el: '#grid',
+		  data: {
+		    photos: [
+		    	'images/engagement4.jpg',
+		    	'images/engagement10.jpg',
+		    	'images/engagement5.jpg',
+		    	'images/engagement16.jpg',
+		    	'images/engagement12.jpg',
+		    	'images/engagement6.jpg',
+		    	'images/engagement13.jpg',
+		    	'images/engagement8.jpg',
+		    	'images/engagement9.jpg',
+		    	'images/engagement10.jpg',
+		    	'images/engagement11.jpg',
+		    	'images/engagement12.jpg',
+		    	'images/engagement13.jpg',
+		    	'images/engagement14.jpg',
+		    	'images/engagement15.jpg',
+		    	'images/engagement16.jpg',
+		    	'images/engagement17.jpg',
+		    	'images/engagement18.jpg',
+				'images/engagement19.jpg',
+		    	'images/engagement20.jpg',
+		    	'images/engagement21.jpg',
+		    	'images/engagement22.jpg',
+		    	'images/engagement23.jpg',
+		    	'images/engagement24.jpg',
+		    	'images/engagement25.jpg',
+		    	'images/engagement26.jpg',
+		    	'images/engagement27.jpg'
+		    ],
+		    current: {
+		    	page: 1,
+		    	beg: 0,
+		    	end: 8
+		    },
+		    modalOpen: false,
+		    selected: ''
+		  },
+		  methods: {
+		  	changePage: function(page, beg, end) {
+		  		this.current = {page: page, beg: beg, end: end};
+		  	},
+		  	openModal: function(img) {
+		  		this.selected = img;
+		  		this.modalOpen = true;
+		  	},
+		  	closeModal: function() { 
+		  		this.modalOpen = false;
+		  	}
+		  }
+		})
 
 	$('a[href*="#"]')
   // Remove links that don't actually link to anything

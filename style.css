@@ -277,6 +277,10 @@ input[type="text"], input[type="email"], textarea {
     text-align: center;
 }
 
+.mt {
+	margin-top: 30px !important;
+}
+
 button {
   margin-top: 20px;
   outline:none;
@@ -284,13 +288,14 @@ button {
   text-align: center;
   width: 130px;
   border-radius:30px;
-  background: rgb(141, 173, 228);
-  border: 2px solid rgb(141, 173, 228);
+  background: rgb(158,192,204);
+  border: 2px solid rgb(158,192,204);
   color:#fff;
   letter-spacing:1px;
   text-shadow:0;
   font-size:12px;
   font-weight:bold;
+  cursor: pointer;
 }
 
 button:hover {
@@ -332,10 +337,56 @@ button:hover {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	height: 700px;
-	color: #fff;
+	height: 93vh;
 	text-align: center;
 	background-position: center;
+	box-sizing: border-box;
+	color: #fff;
+	position: relative;
+}
+
+.registry .contain {
+	background: rgba(250,250,250, 0.5);
+	padding: 0;
+	padding-top: 20px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right:0;
+}
+
+.registry .holder {
+	background: rgb(158,192,204);
+	padding: 30px;
+	border-top: 2px solid #fff;
+}
+
+.registry .holder h1 {
+	margin-top: 0;
+}
+
+.registry button {
+  margin-top: 10px;
+  outline:none;
+  height: 50px;
+  text-align: center;
+  width: 160px;
+  border-radius:5px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  letter-spacing:1px;
+  text-shadow: 0;
+  font-size:12px;
+  font-weight:bold;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.registry button:hover {
+  background: #fff;
+  color: rgb(158,192,204);
 }
 
 /*** KEYFRAMES ***/
