@@ -329,6 +329,17 @@ button:hover {
 	background-color: #fff;
 }
 
+.info .col-sm-4 {
+	text-align: right;
+	font-weight: bold;
+	box-sizing: border-box;
+}
+
+
+.col-sm-8 {
+	box-sizing: border-box;
+}
+
 /*** REGISTRY ***/
 
 .registry {
