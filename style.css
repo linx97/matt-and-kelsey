@@ -8,8 +8,8 @@ body {
 	height: 100%;
 	margin: 0;
 	color: #555555;
-	font-family: 'Cardo', serif;
-	background-image: url("./images/engagement36.jpg");
+	font-family: 'Hind', serif;
+	background-image: url("./images/belmond2.jpg");
 	-webkit-background-size: cover!important; 
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -21,6 +21,11 @@ body {
 
 .contain {
 	padding: 100px 17%;
+}
+
+h1 {
+	font-family: 'Neuton', serif;
+	font-weight: normal;
 }
 
 /*** MAIN ***/
@@ -144,6 +149,10 @@ body {
 	background-color: #fff;
 }
 
+.photos h1 {
+	font-family: 'Neuton', serif;
+}
+
 .photo {
 	margin: 1.666667%;
 	cursor: pointer;
@@ -151,7 +160,6 @@ body {
 	width: 30%;
     height: 280px;
     padding: 0 !important;
-    display: none;
 }
 
 .shown {
@@ -191,16 +199,15 @@ body {
 /*** RSVP ***/
 
 .rsvp {
-	background-image: url("./images/engagement18.jpg");
+	background-image: url("./images/engagement13.jpg");
 	-webkit-background-size: cover!important; 
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position-x: center;
 	background-position-y: 30px;
-	height: 670px;
 	text-align: center;
-	padding: 70px 18%;
+	padding: 70px 16%;
 }
 
 .rsvp-form {
@@ -217,9 +224,9 @@ body {
 .rsvp-white {
 	height: 100%;
     background: #fff;
-    border: 2.5px solid rgba(206,157,134,0.7);
+    border: 1px solid rgba(193,193,193,0.6);
     border-radius: 5px;
-    padding: 40px 50px;
+    padding: 40px 10%;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box; 
@@ -227,6 +234,7 @@ body {
 
 .rsvp-form h1 {
 	margin-top: 0;
+	font-family: 'Neuton', serif;
 }
 
 .rsvp-form .container {
@@ -243,7 +251,7 @@ body {
 }
 
 .radio {
-	margin: 30px 12px 40px;
+	margin: 10px 12px 15px;
 }
 
 select {
@@ -282,20 +290,22 @@ input[type="text"], input[type="email"], textarea {
 }
 
 button {
-  margin-top: 20px;
+  margin: 20px;
   outline:none;
   height: 40px;
   text-align: center;
-  width: 130px;
-  border-radius:30px;
-  background: rgb(158,192,204);
-  border: 2px solid rgb(158,192,204);
+  width: 170px;
+  border-radius:25px;
+  background: rgb(167,167,167);
+  border: 2px solid rgb(167,167,167);
   color:#fff;
   letter-spacing:1px;
   text-shadow:0;
   font-size:12px;
   font-weight:bold;
   cursor: pointer;
+  transition: all 0.2s linear;
+  margin-bottom: 40px;
 }
 
 button:hover {
@@ -303,9 +313,7 @@ button:hover {
 }
 
 .rsvp-form img {
-	position: absolute;
-	width: 95px;
-	bottom: 24px;
+	width: 100%;
 }
 
 .rsvp-form .one {
@@ -322,11 +330,87 @@ button:hover {
 	right: 2px;
 }
 
+#add-guest {
+  margin: 20px auto 40px;
+  text-align: center;
+  border-radius: 25px;
+  background: rgb(167,167,167);
+  border: 2px solid rgb(167,167,167);
+  letter-spacing:1px;
+  font-weight:bold;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  background: #fff;
+  color:rgb(167,167,167);
+  font-size: 12px;
+  padding: 8px;
+  width: 100px;
+}
+
+#add-guest:hover {
+	background: rgb(167,167,167);
+	color: #fff;
+}
+
+.select {
+	width: 100%;
+	position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0px;
+    background: #FFFFFF;
+    color: #333;
+    font-size: 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    padding: 12px 5px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    margin: 15px 0;
+    height: 40px;
+}
+.select::-ms-expand {
+    display: none;
+}
+.select:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.select-arrow {
+    position: absolute;
+    top: 31px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    border-color: #7B7B7B transparent transparent transparent;
+}
+.select:hover ~ .select_arrow,
+.select:focus ~ .select_arrow {
+    border-top-color: #000000;
+}
+.select:disabled ~ .select_arrow {
+    border-top-color: #CCCCCC;
+}
+
 /*** INFO ***/
 
 .info {
 	width: 100%;
 	background-color: #fff;
+}
+
+.info h1 {
+	font-family: 'Neuton', serif;
 }
 
 .info .col-sm-4 {
@@ -340,10 +424,14 @@ button:hover {
 	box-sizing: border-box;
 }
 
+.col-xs-6, .col-xs-5, .col-xs-7, .col-xs-4, .col-xs-3, .col-xs-8, .col-xs-9 {
+	box-sizing: border-box;
+}
+
 /*** REGISTRY ***/
 
 .registry {
-	background-image: url("./images/engagement17.jpg");
+	background-image: url("./images/engagement34.jpg");
 	-webkit-background-size: cover!important; 
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -357,27 +445,22 @@ button:hover {
 }
 
 .registry .contain {
-	background: rgba(250,250,250, 0.5);
-	padding: 0;
-	padding-top: 20px;
+	background: rgba(35,35,35, 0.69);	
 	position: absolute;
+	top: 0;
 	bottom: 0;
 	left: 0;
 	right:0;
+	padding-top: 27vh;
+	opacity: 0;
+	transition: all 1.3s ease-in 0s;
 }
 
-.registry .holder {
-	background: rgb(158,192,204);
-	padding: 30px;
-	border-top: 2px solid #fff;
-}
-
-.registry .holder h1 {
+.registry  h1 {
 	margin-top: 0;
 }
 
 .registry button {
-  margin-top: 10px;
   outline:none;
   height: 50px;
   text-align: center;
@@ -397,7 +480,7 @@ button:hover {
 
 .registry button:hover {
   background: #fff;
-  color: rgb(158,192,204);
+  color: rgb(167,167,167);
 }
 
 /*** KEYFRAMES ***/
@@ -417,19 +500,6 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
-	body {
-		background-image: url("./images/engagement11-phone.jpg");
-		background-position: center;
-	}
-	.registry {
-		background-image: url("./images/engagement17-phone.jpg");
-		background-position: center;
-	}
-	.rsvp {
-	background-image: url("./images/engagement18-phone.jpg");
-		background-position-x: center;
-		background-position-y: center;
-	}
 	.photo {
 		height: 200px;
 	}
@@ -438,6 +508,9 @@ button:hover {
 	}
 	#heading {
 		padding-top: 70%;
+	}
+	.rsvp {
+		padding: 70px 11%;
 	}
 }
 
@@ -482,19 +555,20 @@ button:hover {
 	.rsvp-white {
 	    padding: 40px 20px;
 	}
-	.rsvp-form img {
-	    width: 80px;
-	    bottom: 13px;
-	}
-	.rsvp-form .two {
-		right: -12px;
-	}
-	.rsvp-form .one {
-		left: -12px;
+}
+@media screen and (max-width: 576px) {
+	.info .col-sm-4 {
+		text-align: left;
 	}
 }
 @media screen and (max-width: 400px) {
 	.time h1 {
 		font-size: 3.5em;
+	}
+}
+@media screen and (max-width: 340px) {
+	.nav-inner a {
+	    margin-left: 5px;
+	    margin-right: 5px;
 	}
 }

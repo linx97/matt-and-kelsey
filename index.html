@@ -5,7 +5,7 @@
 	<title>Matt | Kelsey</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" type="image/png" href="./images/logo.png"/>
-	<link href="https://fonts.googleapis.com/css?family=Hind:300,400+Cardo" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Hind:300,400+Neuton:200" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="./bootstrap.css">
 	<link rel="stylesheet" href="./style.css">
@@ -13,13 +13,13 @@
 <body>
 	<div id="nav-outer">
 		<div class="nav-inner">
-			<a href="#2">photos</a>
+			<a href="#2">wedding</a>
 			<a href="#3">rsvp</a>
 			<a href="#1"><img id="logo" src="./images/logo.png" alt=""><img id="shine" src="./images/shine.png"></a>
-			<a href="#4">info</a>
+			<a href="#4">photos</a>
 			<a href="#5">registry</a>
 		</div>
-		<img id="flowers" src="./images/flowers5.png">
+		<!-- <img id="flowers" src="./images/flowers5.png"> -->
 	</div>
 	<div class="body" id="1">
 		<div id="heading">
@@ -32,77 +32,9 @@
 			<div class="time" id="mins"></div>
 		</div>
 	</div>
-	<div class="photos" id="2">
-		<div class="contain" id="grid">
-			<h1>Photos</h1>
-			<div class="photo-grid">
-				<div class="row">
-					<div class="col-xs-4 photo" v-for="(photo, index) in photos"  v-bind:class="{shown: index >= current.beg && index <= current.end}">
-						<a data-fancybox="gallery" :href="photo"><img :src="photo" alt="" @click="openModal(photo)"></a>
-					</div>
-				</div>
-				<div class="pages">
-					<a @click="changePage(1,0,8)" v-bind:class="{active: current.page === 1}">1</a>
-					<a @click="changePage(2,9,17)" v-bind:class="{active: current.page === 2}">2</a>
-					<a @click="changePage(3,18,26)" v-bind:class="{active: current.page === 3}">3</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="rsvp" id="3">
-		<div class="rsvp-form">
-			<div class="rsvp-white">
-				<h1>RSVP</h1>
-				<h3>We're looking forward to celebrating with you!</h3>
-				<p>Please use the form below to let us know if you will be attending along with the number of guests in your party.</p>
-				<div class="container">
-					<form action="https://formspree.io/dmoore@vmware.com" method="POST" method="POST">
-						<label>Will you be able to attend?</label>
-						<div class="radio">
-							<input type="radio" name="attending" value="accept" checked="checked">  Gladly Accept<br>
-							<input type="radio" name="attending" value="decline">  Regretfully Decline<br>
-						</div>
-						<label>How many will be attending?</label><br>
-						<label for="number-of-adults" required="required">Adults</label>
-						<select name="number-of-adults" id="">
-							<option value="0">0</option>
-							<option value="1" selected>1</option>
-							<option value="1">2</option>
-							<option value="1">3</option>
-							<option value="1">4</option>
-							<option value="1">5</option>
-							<option value="1">6</option>
-							<option value="1">7</option>
-							<option value="1">8</option>
-							<option value="1">9</option>
-							<option value="1">10</option>
-						</select>
-						<label for="number-of-children" required="required">Children</label>
-						<select name="number-of-children" id="">
-							<option value="0">0</option>
-							<option value="1" selected>1</option>
-							<option value="1">2</option>
-							<option value="1">3</option>
-							<option value="1">4</option>
-							<option value="1">5</option>
-							<option value="1">6</option>
-							<option value="1">7</option>
-							<option value="1">8</option>
-							<option value="1">9</option>
-							<option value="1">10</option>
-						</select>
-						<input class="mt" id="name" type="text" name="name" placeholder="names" required="required" />
-				    	<input id="email" type="email" name="_reply2" placeholder="email" required="required" />
-						<button type="submit">Send</button>
-						<img src="./images/flowers4.png" alt="" class="one"><img src="./images/flowers4.png" alt="" class="two">
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="info" id="4">
+	<div class="info" id="2">
 		<div class="contain">
-			<h1>Info</h1>
+			<h1>Our Wedding</h1>
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4"><h4>When</h4></div>
@@ -125,18 +57,76 @@
 			</div>
 		</div>
 	</div>
+	<div class="rsvp" id="3">
+		<div class="rsvp-form">
+			<div class="rsvp-white">
+				<img src="images/leaves-down.png" alt="">
+				<h1>RSVP</h1>
+				<h3>We're looking forward to celebrating with you!</h3>
+				<p>Kindly respond by November 30th, 2017. For each guest in your party, please add their name and food preference.</p>
+				<div class="container">
+					<form action="https://formspree.io/dmoore@vmware.com" method="POST" method="POST">
+						<div class="radio">
+							<input type="radio" name="attending" value="accept" checked="checked">  Gladly Accept<br>
+							<input type="radio" name="attending" value="decline">  Regretfully Decline<br>
+						</div>
+						<div class="row" id="guests">
+
+						</div>
+						<div id="add-guest" class="button">Add Guest</div>
+				    	<input id="email" type="email" name="_reply2" placeholder="email" required="required" />
+						<button type="submit">Send</button>
+					</form>
+				</div>
+				<img src="images/leaves-up.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="photos" id="4">
+		<div class="contain" id="grid">
+			<h1>Photos</h1>
+			<div class="photo-grid">
+				<div class="row">
+					<div class="col-xs-4 photo">
+						<a data-fancybox="gallery" href="./images/engagement4.jpg"><img src="./images/engagement4.jpg"></a>
+					</div>
+					<div class="col-xs-4 photo">
+						<a data-fancybox="gallery" href="./images/engagement9.jpg"><img src="./images/engagement9.jpg"></a>
+					</div>
+					<div class="col-xs-4 photo">
+						<a data-fancybox="gallery" href="./images/engagement13.jpg"><img src="./images/engagement13.jpg"></a>
+					</div>
+					<div class="col-xs-4 photo">
+						<a data-fancybox="gallery" href="./images/engagement18.jpg"><img src="./images/engagement18.jpg"></a>
+					</div>
+					<div class="col-xs-4 photo">
+						<a data-fancybox="gallery" href="./images/engagement22.jpg"><img src="./images/engagement22.jpg"></a>
+					</div>
+					<div class="col-xs-4 photo">
+						<a data-fancybox="gallery" href="./images/engagement23.jpg"><img src="./images/engagement23.jpg"></a>
+					</div>
+					<div class="col-xs-4 photo">
+						<a data-fancybox="gallery" href="./images/engagement6.jpg"><img src="./images/engagement6.jpg"></a>
+					</div>
+					<div class="col-xs-4 photo">
+						<a data-fancybox="gallery" href="./images/engagement27.jpg"><img src="./images/engagement27.jpg"></a>
+					</div>
+					<div class="col-xs-4 photo">
+						<a data-fancybox="gallery" href="./images/engagement21.jpg"><img src="./images/engagement21.jpg"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="registry" id="5">
-		<div class="contain">
-			<div class="holder">
+		<div class="contain" id="reg">
 				<h1>Registry</h1>
 				<p>You can help us save for our first home on Honeyfund!</p>
 				<a href="https://www.honeyfund.com/wedding/kelseyandmattgethitched"><button>Our Registry</button></a>
-			</div>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
 	<script type="text/javascript" src="./functions.js"></script>
-	<script src="https://unpkg.com/vue@2.4.2/dist/vue.min.js"></script>
 </body>
 </html>
