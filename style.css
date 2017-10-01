@@ -28,6 +28,33 @@ h1 {
 	font-weight: normal;
 }
 
+.center {
+	text-align: center;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+hr {
+	background-color: #F7F7F7;
+	margin: 50px 0;
+}
+
+.mb {
+	margin-bottom: 50px;
+}
+
+li a {
+	color: #6E7E64;
+	text-decoration: none;
+	transition: all .3s ease-in;
+}
+
+li a:hover {
+	text-decoration: underline;
+}
+
 /*** MAIN ***/
 
 #nav-outer {
@@ -51,12 +78,16 @@ h1 {
 .nav-inner a {
 	color: #333333;
 	text-decoration: none;
-	margin-left: 5.3%;
-	margin-right: 5.3%;
 	height: 61px;
 	opacity: 0.7;
 	transition: all 0.7s linear;
 	cursor: pointer;
+}
+
+.nav-item {
+	display: inline-block;
+	margin-left: 5.3%;
+	margin-right: 5.3%;
 }
 .nav-inner a:hover {
 	opacity: .9;
@@ -88,13 +119,40 @@ h1 {
 #logo:hover + #shine {
 	-webkit-animation: shine 1.5s linear;
 }
-#flowers {
-	width: 24%;
-	position: absolute;
-	top: 58%;
-	left: 38%;
-	margin: 0 auto;
-	transition: top 0.5s linear 0s;
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: -20px;
+}
+
+.dropdown-content a {
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    height: inherit;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #F7F7F7;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
 }
 
 .body {
@@ -420,11 +478,17 @@ button:hover {
 }
 
 
-.col-sm-8 {
-	box-sizing: border-box;
+.col-sm-8 ul {
+	margin-top: 1.33em;
 }
 
-.col-xs-6, .col-xs-5, .col-xs-7, .col-xs-4, .col-xs-3, .col-xs-8, .col-xs-9 {
+.col-sm-8 p {
+	margin-top: 1.33em;
+	margin-left: 20px;
+	margin-bottom: 0;
+}
+
+.col-xs-8, .col-xs-4, .col-xs-6, .col-xs-5, .col-xs-7, .col-sm-4, .col-sm-3, .col-sm-8, .col-sm-9 {
 	box-sizing: border-box;
 }
 
@@ -560,10 +624,20 @@ button:hover {
 	.info .col-sm-4 {
 		text-align: left;
 	}
+	.nav-item {
+		margin-left: 0.3%;
+    	margin-right: 0.3%;
+	}
 }
 @media screen and (max-width: 400px) {
 	.time h1 {
 		font-size: 3.5em;
+	}
+	body {
+		font-size: 0.88rem;
+	}
+	.rsvp-white {
+	    padding: 30px 10px;
 	}
 }
 @media screen and (max-width: 340px) {

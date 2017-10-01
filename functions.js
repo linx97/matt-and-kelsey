@@ -93,9 +93,10 @@ $(document).ready(function(){
 
   var guestCount = 1;
   $('#add-guest').click(function(){
+    console.log('hi')
   	
-  	let template = 	'<div class="col-xs-8"><input type="text" name="guest-' + guestCount + '" placeholder="name" /></div><div class="col-xs-4 select-holder"><select name="food-' + guestCount + '" class="select"><option value="ranch">From the Ranch</option><option value="sea">From the Sea</option><option value="farm">From the Farm</option><option value="children">Children</option></select><div class="select-arrow"></div></div>'
-  	
+  	let template = 	'<div class="col-xs-8"><input type="text" name="guest-' + guestCount + '" placeholder="name" /></div><div class="col-xs-4 select-holder"><select name="food-' + guestCount + '" class="select"><option value="" disabled selected>Dinner Option</option><option value="ranch">From the Ranch</option><option value="sea">From the Sea</option><option value="farm">From the Farm</option><option value="children">Children</option></select><div class="select-arrow"></div></div>'
+  	console.log(template)
   	$('#guests').append(template);
 
   	guestCount += 1;
