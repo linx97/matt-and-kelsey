@@ -477,6 +477,19 @@ button:hover {
 	box-sizing: border-box;
 }
 
+.smig {
+	width: 250px;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+
+.wedding-party h4 {
+    margin: 12px 0;
+}
+
+.info .wedding-party .col-sm-4 {
+	text-align: center;
+}
 
 .col-sm-8 ul {
 	margin-top: 1.33em;
@@ -488,10 +501,17 @@ button:hover {
 	margin-bottom: 0;
 }
 
-.col-xs-8, .col-xs-4, .col-xs-6, .col-xs-5, .col-xs-7, .col-sm-4, .col-sm-3, .col-sm-8, .col-sm-9 {
+.col-sm-5, .col-sm-7, .col-xs-8, .col-xs-4, .col-xs-6, .col-xs-5, .col-xs-7, .col-sm-4, .col-sm-3, .col-sm-8, .col-sm-9 {
 	box-sizing: border-box;
 }
 
+.wedding-party p {
+	margin-left: 0;
+}
+
+.wedding-party .row {
+	margin-bottom: 30px;
+}
 /*** REGISTRY ***/
 
 .registry {

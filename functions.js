@@ -1,6 +1,11 @@
-
-
 $(document).ready(function(){
+  $("a.party").fancybox({
+      helpers : {
+          title: {
+              type: 'inside'
+          }
+      }
+  });
 
 	function countdown() {
 		var wedding = new Date("January 1, 2018 17:00:00");
