@@ -96,16 +96,25 @@ $(document).ready(function(){
     }
   });
 
-  var guestCount = 1;
+  var guestCount = 2;
   $('#add-guest').click(function(){
     console.log('hi')
   	
-  	let template = 	'<div class="col-xs-8"><input type="text" name="guest-' + guestCount + '" placeholder="name" /></div><div class="col-xs-4 select-holder"><select name="food-' + guestCount + '" class="select"><option value="" disabled selected>Dinner Option</option><option value="ranch">From the Ranch</option><option value="sea">From the Sea</option><option value="farm">From the Farm</option><option value="children">Children</option></select><div class="select-arrow"></div></div>'
+  	let template = 	'<div class="col-xs-8"><input type="text" class="guest-check" name="guest-' + guestCount + '" placeholder="name" /></div><div class="col-xs-4 select-holder"><select name="food-for-guest-' + guestCount + '" class="select"><option value="" disabled selected>Dinner Option</option><option value="ranch">From the Ranch</option><option value="sea">From the Sea</option><option value="farm">From the Farm</option><option value="children">Children</option></select><div class="select-arrow"></div></div>'
   	console.log(template)
   	$('#guests').append(template);
 
   	guestCount += 1;
   })
+
+  // $('#submit').click(function(){
+  //   var checkedValue = $('.attending:checked').val();
+  //   var guests = $('.guest-check');
+  //   var noGuests = guests.length == 0 || !guests[0].value;
+  //   if(checkedValue == 'accept' && noGuests) {
+  //     alert('Please list your guests by using the ADD GUEST button.')
+  //   }
+  // })
    
     countdown();   
     window.addEventListener("scroll", yScroll);

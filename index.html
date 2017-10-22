@@ -32,7 +32,7 @@
 				<a href="#4">photos</a>
 			</div>
 			<div class="nav-item">
-				<a href="#5">registry</a>
+				<a href="#5">registries</a>
 			</div>
 		</div>
 		<!-- <img id="flowers" src="./images/flowers5.png"> -->
@@ -57,7 +57,12 @@
 					<div class="col-sm-12 mb">
 						<p>Kelsey and Matt met in January of 2014. Matt had recently moved back to Santa Barbara from Arizona, and Kelsey was about to start school in town  at Paul Mitchell. Both were focused on school and work,  but could not ignore the connection that they had. Matt took Kelsey on their first date to Red's wine bar in funk zone, and they have been inseparable since.</p>
 					</div>
-
+<!-- 					<div class="row">
+						<div class="col-sm-3"><a data-fancybox="gallery" class="party" href="images/about1.jpg"><img class="smig" src="images/about1.jpg"></a></div>
+						<div class="col-sm-3"><a data-fancybox="gallery" class="party" href="images/about2.jpg"><img class="smig" src="images/about2.jpg"></a></div>
+						<div class="col-sm-3"><a data-fancybox="gallery" class="party" href="images/about3.jpg"><img class="smig" src="images/about3.jpg"></a></div>
+						<div class="col-sm-3"><a data-fancybox="gallery" class="party" href="images/about4.jpg"><img class="smig" src="images/about4.jpg"></a></div>
+					</div> -->
 					<hr>
 					<div class="col-sm-12 center" id="proposal"><h2>The Proposal</h2></div>
 					<div class="col-sm-12 mb">
@@ -299,19 +304,19 @@
 				<img src="images/leaves-down.png" alt="">
 				<h1>RSVP</h1>
 				<h3>We're looking forward to celebrating with you!</h3>
-				<p>Kindly respond by November 30th, 2017. For each guest in your party, please add their name and dinner preference.</p>
+				<p>Kindly respond by November 30th, 2017. <b>For each guest in your party, please add their name and dinner preference.</b> Have questions?  Please email <a href="mailto:debbieamoore123@comcast.net">debbieamoore123@comcast.net</a></p>
 				<div class="container">
 					<form action="https://formspree.io/dmoore@vmware.com" method="POST" method="POST">
 						<div class="radio">
-							<input type="radio" name="attending" value="accept" checked="checked">  Gladly Accept<br>
-							<input type="radio" name="attending" value="decline">  Regretfully Decline<br>
+							<input type="radio" name="attending" class="attending" value="accept" checked="checked">  Gladly Accept<br>
+							<input type="radio" name="attending" class="attending" value="decline">  Regretfully Decline<br>
 						</div>
 						<div class="row" id="guests">
-
+							<div class="col-xs-8"><input type="text" name="guest-1" placeholder="name" /></div><div class="col-xs-4 select-holder"><select name="food-for-guest-1" class="select"><option value="" disabled selected>Dinner Option</option><option value="ranch">From the Ranch</option><option value="sea">From the Sea</option><option value="farm">From the Farm</option><option value="children">Children</option></select><div class="select-arrow"></div></div>
 						</div>
-						<div id="add-guest" class="button">Add Guest</div>
+						<div id="add-guest" class="button">Add Another Guest</div>
 				    	<input id="email" type="email" name="_reply2" placeholder="email" required="required" />
-						<button type="submit">Send</button>
+						<button type="submit" class="button" id="submit">Send</button>
 					</form>
 				</div>
 				<img src="images/leaves-up.png" alt="">
@@ -345,7 +350,7 @@
 						<a data-fancybox="gallery" href="./images/engagement6.jpg"><img src="./images/engagement6.jpg"></a>
 					</div>
 					<div class="col-xs-4 photo">
-						<a data-fancybox="gallery" href="./images/engagement27.jpg"><img src="./images/engagement27.jpg"></a>
+						<a data-fancybox="gallery" href="./images/engagement12.jpg"><img src="./images/engagement12.jpg"></a>
 					</div>
 					<div class="col-xs-4 photo">
 						<a data-fancybox="gallery" href="./images/engagement21.jpg"><img src="./images/engagement21.jpg"></a>
@@ -356,9 +361,9 @@
 	</div>
 	<div class="registry" id="5">
 		<div class="contain" id="reg">
-				<h1>Registry</h1>
-				<p>One of our registries is ready!</p>
+				<h1>Our Registries</h1>
 				<a href="https://www.williams-sonoma.com/registry/ldcnsb2m8r/registry-list.html"><button>Williams Sonoma</button></a>
+				<a href="http://www.c2ccollection.com/registry/moore/138"><button>Coast 2 Coast</button></a>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
