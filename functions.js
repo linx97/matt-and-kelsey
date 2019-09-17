@@ -8,7 +8,7 @@ $(document).ready(function(){
   });
 
 	function countdown() {
-		var wedding = new Date("January 1, 2018 17:00:00");
+		var wedding = new Date("January 1, 2020 17:00:00");
 		var now = new Date();
 		var timeDiff = wedding.getTime() - now.getTime();
 
